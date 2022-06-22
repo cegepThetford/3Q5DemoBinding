@@ -1,0 +1,24 @@
+﻿<Window x:Class="Demo4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo4"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="Height" Width="400">
+    <StackPanel>
+        <GroupBox Header="Ensemble1" FontSize="32" Margin="5" Background="SkyBlue">
+            <StackPanel>
+                <TextBox Text="{Binding RelativeSource={RelativeSource Self},Path=ActualWidth,Mode=OneWay}"/>
+                <TextBox Text="{Binding Path=Header,RelativeSource={RelativeSource AncestorType={x:Type GroupBox}}}"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Ensemble2" FontSize="32" Margin="5"  Background="LightYellow">
+            <StackPanel Margin="5">
+                <TextBox Text="{Binding RelativeSource={RelativeSource Self},Path=ActualWidth,Mode=OneWay}"/>
+                <TextBox Text="{Binding Path=Header,RelativeSource={RelativeSource AncestorType={x:Type GroupBox}}}"/>
+            </StackPanel>
+        </GroupBox>
+
+    </StackPanel>
+</Window>

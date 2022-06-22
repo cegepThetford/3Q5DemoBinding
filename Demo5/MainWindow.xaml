@@ -1,0 +1,19 @@
+﻿<Window x:Class="Demo5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo5"
+        mc:Ignorable="d"
+    Title="MainWindow" Height="150" Width="325">
+    <StackPanel>
+        <Slider Name="slider" Minimum="8" Maximum="64" Value="10"/>
+        <TextBox Name="tbValeurSlider"  Text="{Binding ElementName=slider, Path=Value}" FontSize="24"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="btn25" Content="25%" Click="btn25_Click"/>
+            <Button Name="btn50" Content="50%" Click="btn50_Click"/>
+            <Button Name="btn75" Content="75%" Click="btn75_Click"/>
+        </StackPanel>
+        <TextBlock Name="tbAffichage" Text="Bonjour" FontSize="{Binding ElementName=slider, Path=Value}"/>
+    </StackPanel>
+</Window>
